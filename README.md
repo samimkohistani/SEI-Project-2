@@ -1,2 +1,2 @@
-# Crud-app
-project for CRUD
+# Highest Paid Athletes!
+project for SEI
