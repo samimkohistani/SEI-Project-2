@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
+
+:root{
+
+    --dark:#2b2d42;
+    --light:#adb5bd;
+    --border:#dee2e6;
+    --broder-btn:#edf2f4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container{
+    max-width: 511px;
+    margin: auto;
+    align-items: center;
+}
+
+.nav-brand{
+    font: size 1.5em;
+    flex-wrap: wrap;
+}
+
+.d-flex{
+    display: flex;
+    font-weight: bold;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.border-shadow{
+    text-align: 1px solid var(--broder-btn);
+    box-shadow: 1px 3px 10px #e9efef;
+}
+
+.text-dark{
+    color:var(--dark);
+}
+
+.text-gradient{
+    background: linear-gradient(to right,#8e2de2,#4a00e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+#header nav{
+    background-color: #06d6a0;
+    padding: 1em 0;
+    width: 100%;
+}
+
+#site-main{
+    margin-top: 6em;
+    font-family:'Barlow', sans-serif;
+}
+
+#sit-main .container .box-nav > a{
+    font-size: 1em;
+    padding: 0.5em 1em;
+}
+
+#site-main .container form{
+    margin: 2em 0;
+}
+
+table{
+    border-spacing: 0px;
+    width: 100px;
+}
+
+.table td,.table th{
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+
+.table td>a.btn{
+    padding: 0.3em 0em 1em 0em;
+    font-size: 1.1em;
+    margin:0em;
+}
+
+.table tr:hover{
+    background-color: #06d6a0;
+}
+
+.table tr:hover td > a{
+    box-shadow:none;
+}
+
+.table .thead-dark th{
+    color: white;
+    background-color: var(--dark);
+}
+
+
+@media only screen and (max-width:510px){
+    table,thead,tbody,th,td,tr{
+        display:block;
+    }
+thead tr{
+    position: absolute;
+    top: -9999px;
+    left:-9999px;
+
+}
+tr{
+    border: 1px solid var(--border);
+}
+td{
+    border: none;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+}
+}
