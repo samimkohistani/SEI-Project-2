@@ -20,9 +20,9 @@ a{
 }
 
 .container{
-    max-width: 511px;
+    max-width: 495px;
     margin: auto;
-    align-items: center;
+    
 }
 
 .nav-brand{
@@ -113,7 +113,7 @@ table{
 }
 
 
-@media only screen and (max-width:510px){
+@media only screen and (max-width:494px){
     table,thead,tbody,th,td,tr{
         display:block;
     }
