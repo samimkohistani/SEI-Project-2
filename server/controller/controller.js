@@ -9,10 +9,11 @@ exports.create = (req, res) => {
     }
     // new player
     const user = new Userdb({
-        Player: req.body.Player,
-        Age: req.body.Age,
-        Team: req.body.Team,
-        Position: req.body.Position
+        Player :req.body.Player,
+        Age :req.body.Age,
+        Team :req.body.Team,
+        Position :req.body.Position,
+        Contract :req.body.Contract
         
     })
 
