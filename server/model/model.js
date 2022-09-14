@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-var schema = new mongoose.schema({
+var Schema = new mongoose.Schema({
     Player:{
         type : String,
         required : true
@@ -24,6 +24,6 @@ var schema = new mongoose.schema({
 
 });
 
-const Userdb = mongoose.model('userdb', schema);
+const Userdb = mongoose.model('userdb', Schema);
 
 module.exports = Userdb
