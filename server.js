@@ -1,28 +1,25 @@
 // Dependencies
 const express = require('express');
-const app = express();
-const morgan = require("morgan");
 const dotenv = require('dotenv');
+const morgan = require("morgan");
 const bodyparser = require('body-parser');
 const path = require('path');
-const { dirname } = require('path');
-const { json } = require('body-parser');
-// connecting mongoDB
 
-const mongoDB = require('./server/database/connection');
-const { connect } = require('http2');
+const connectDB =require('./server/database/connection');
+
+const app = express();
+
 // secret path
-
 dotenv.config({path:'config.env'});
-
 // port for others
-const port = process.env.port || 8080
+const PORT = process.env.PORT || 8080
 
 // log request
 app.use(morgan('tiny'));
 
 // mongoDB connection
 connectDB();
+
 
 // parse request to body-parser
 app.use(bodyparser.urlencoded({extended:true}));
@@ -38,14 +35,11 @@ app.use('/img',express.static(path.resolve(__dirname,"assets/img")));
 
 
 // load routes
-
 app.use('/', require('./server/routes/router'));
 
 
 // localhost listen
-app.listen(port,()=>{console.log('server is running on http://localhost:${port}')});
-
-
+app.listen(PORT,()=>{console.log('server is running on http://localhost:${PORT}')});
 
 
 
