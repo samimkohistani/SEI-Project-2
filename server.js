@@ -6,6 +6,8 @@ const bodyparser = require('body-parser');
 const path = require('path');
 
 const connectDB =require('./server/database/connection');
+const { dirname } = require('path');
+const { json } = require('body-parser');
 
 const app = express();
 

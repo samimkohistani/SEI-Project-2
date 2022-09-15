@@ -1,29 +1,17 @@
 const mongoose = require('mongoose')
 
-var Schema = new mongoose.Schema({
-    Player:{
-        type : String,
-        required : true
-    },
-    Age:{
-        type : String,
-        required : true
-    },
-    Team:{
-        type : String,
-        required : true
-    },
-    Position:{
-        type : String,
-        required : true
-    },
-    Contract:{
-        type : String,
-        required : true
-    }
+var schema = new mongoose.Schema(
+    {
+        Name:{
+            type: String, require: true, unique: true},
+            Age: String,
+            Team: String,
+            Position: String,
+            Contract: String
+    
+        }
+);
 
-});
+const Userdb = mongoose.model('userdb', schema);
 
-const Userdb = mongoose.model('userdb', Schema);
-
-module.exports = Userdb
+module.exports = Userdb;

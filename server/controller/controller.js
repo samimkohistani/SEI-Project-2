@@ -1,33 +1,33 @@
 const Userdb = require('../model/model');
 
 // create and save new player
-exports.create = (req, res) => {
-    // create and save new user
-    if(!req,body){
-        res.status(400).send({message:"content can not be empty!"});
+exports.create = (req,res)=>{
+    if(!req.body){
+        res.status(400).send({message: "Content can not be empty"});
         return;
     }
-    // new player
+    // New user
     const user = new Userdb({
-        Player :req.body.Player,
-        Age :req.body.Age,
-        Team :req.body.Team,
-        Position :req.body.Position,
-        Contract :req.body.Contract
-        
+        Name:req.body.Name,
+        Age:req.body.Age,
+        Team:req.body.Team,
+        Position:req.body.Position,
+        Contract:req.body.Contract,
+
     })
 
-    // save player in the database
+    // save date
     user
-     .save(user)
-     .then(data => {
+      .save(user)
+      .then(data =>{
         res.send(data)
-     })
-     .catch(err =>{
+      })
+      .catch(err =>{
         res.status(500).send({
-            message : err.message || "some error occurred while creating a create operation"  
+            message:err.message || "some err occured while creating"
         });
-     });
+      });
+
 }
 
 // retrieve and return all users / retrieve and return a single user
